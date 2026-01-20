@@ -82,8 +82,8 @@ const Navbar = () => {
                     />
                 </Link>
 
-                {/* Desktop Nav - Visible only on XL (approx 1280px+) to prevent overlap on zoom */}
-                <div className="hidden xl:flex items-center gap-4 2xl:gap-8">
+                {/* Desktop Nav - Visible only on 2XL (approx 1536px+) to prevent overlap on high zoom (150-175%) */}
+                <div className="hidden 2xl:flex items-center gap-4 2xl:gap-8">
                     {navLinks.map((link) => (
                         <div
                             key={link.name}
@@ -93,7 +93,7 @@ const Navbar = () => {
                         >
                             {link.subItems ? (
                                 <>
-                                    <button className={`flex items-center font-bold text-sm 2xl:text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}>
+                                    <button className={`flex items-center font-bold text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}>
                                         {link.name} <ChevronDown size={14} className={`ml-1 transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                                     </button>
 
@@ -125,7 +125,7 @@ const Navbar = () => {
                             ) : (
                                 <Link
                                     to={link.path}
-                                    className={`font-bold text-sm 2xl:text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}
+                                    className={`font-bold text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}
                                 >
                                     {link.name}
                                 </Link>
@@ -144,8 +144,8 @@ const Navbar = () => {
                         Admission
                     </Link>
 
-                    {/* Mobile Toggle - Visible until XL */}
-                    <button onClick={() => setIsOpen(true)} className={`xl:hidden p-1 md:p-2 ${navTextIsDark ? 'text-blue-900' : 'text-blue-900'}`}>
+                    {/* Mobile Toggle - Visible until 2XL */}
+                    <button onClick={() => setIsOpen(true)} className={`2xl:hidden p-1 md:p-2 ${navTextIsDark ? 'text-blue-900' : 'text-blue-900'}`}>
                         <Menu size={24} className="md:w-7 md:h-7" />
                     </button>
                 </div>

@@ -9,9 +9,10 @@ const Footer = () => {
 
             {/* Main Footer Content */}
             <div className="container mx-auto px-6 mt-16">
-                <div className="grid md:grid-cols-4 gap-12 border-b border-gray-800 pb-12">
-                    <div className="md:col-span-1">
-                        <img src="/images/KSK/loga.png" alt="KSKCET Logo" className="h-20 mb-6 bg-white p-2 rounded-lg" />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 border-b border-gray-800 pb-12">
+                    {/* 1. About */}
+                    <div className="xl:col-span-1">
+                        <img src="/images/KSK/loga.png" alt="KSKCET Logo" className="h-16 mb-6 bg-white p-2 rounded-lg" />
                         <p className="text-gray-400 text-sm leading-relaxed mb-6">
                             Approved by AICTE, New Delhi & Affiliated to Anna University, Chennai. A premier institution dedicated to technical excellence.
                         </p>
@@ -23,9 +24,10 @@ const Footer = () => {
                         </div>
                     </div>
 
+                    {/* 2. Quick Links */}
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-blue-500 inline-block pb-1">Quick Links</h4>
-                        <ul className="space-y-3 text-gray-400">
+                        <ul className="space-y-3 text-gray-400 text-sm">
                             <li><Link to="/about" className="hover:text-blue-400 transition flex items-center"><ExternalLink size={14} className="mr-2" /> About Us</Link></li>
                             <li><Link to="/vision-mission" className="hover:text-blue-400 transition flex items-center"><ExternalLink size={14} className="mr-2" /> Vision & Mission</Link></li>
                             <li><Link to="/governing-body" className="hover:text-blue-400 transition flex items-center"><ExternalLink size={14} className="mr-2" /> Administration</Link></li>
@@ -33,9 +35,10 @@ const Footer = () => {
                         </ul>
                     </div>
 
+                    {/* 3. Departments */}
                     <div>
                         <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-green-500 inline-block pb-1">Departments</h4>
-                        <ul className="space-y-3 text-gray-400">
+                        <ul className="space-y-3 text-gray-400 text-sm">
                             <li><Link to="/cse" className="hover:text-green-400 transition">Computer Science (CSE)</Link></li>
                             <li><Link to="/eee" className="hover:text-green-400 transition">Electrical (EEE)</Link></li>
                             <li><Link to="/ece" className="hover:text-green-400 transition">Electronics (ECE)</Link></li>
@@ -44,13 +47,37 @@ const Footer = () => {
                         </ul>
                     </div>
 
+                    {/* 4. Other Links (New) */}
                     <div>
-                        <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-orange-500 inline-block pb-1">Contact Us</h4>
-                        <ul className="space-y-4 text-gray-400">
-                            <li className="flex items-start"><MapPin size={20} className="mr-3 text-orange-500 flex-shrink-0" /> Thanjavur Main Road, Kumbakonam - 612 501.</li>
-                            <li className="flex items-center"><Phone size={20} className="mr-3 text-green-500" /> +91 98765 43210</li>
-                            <li className="flex items-center"><Mail size={20} className="mr-3 text-blue-500" /> info@kskcet.edu.in</li>
+                        <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-purple-500 inline-block pb-1">Other Links</h4>
+                        <ul className="space-y-3 text-gray-400 text-sm font-semibold">
+                            <li><a href="#" className="hover:text-purple-400 transition flex items-center">» ANTI-RAGGING COMMITTEE</a></li>
+                            <li><a href="/images/KSK/3456-AICTE-APPROVAL.pdf" target="_blank" className="hover:text-purple-400 transition flex items-center">» AICTE APPROVAL</a></li>
+                            <li><a href="/images/KSK/AUDITED-STATEMENT.pdf" target="_blank" className="hover:text-purple-400 transition flex items-center">» MANDATORY DISCLOSURE</a></li>
+                            <li><a href="#" className="hover:text-purple-400 transition flex items-center">» AICTE FEEDBACK</a></li>
+                            <li><a href="/images/KSK/Complaints-cum-Redressal-Committee.pdf" target="_blank" className="hover:text-purple-400 transition flex items-center">» GRIEVANCES CELL</a></li>
+                            <li><a href="/images/KSK/K.S.K-College-of-Engineering-and-Technology-New20240308-.pdf" target="_blank" className="hover:text-purple-400 transition flex items-center">» ACADEMIC CALENDAR</a></li>
+                            <li><a href="#" className="hover:text-purple-400 transition flex items-center">» E-RESOURCES</a></li>
                         </ul>
+                    </div>
+
+                    {/* 5. Contact Us */}
+                    <div className="md:col-span-2 lg:col-span-1 xl:col-span-1">
+                        <h4 className="text-lg font-bold mb-6 text-white border-b-2 border-orange-500 inline-block pb-1">Contact Us</h4>
+                        <div className="space-y-4 text-gray-400 text-sm">
+                            <div className="flex items-start">
+                                <MapPin size={20} className="mr-3 text-orange-500 flex-shrink-0 mt-1" />
+                                <p>KSK College of Engineering & Technology<br />River Bridge 45C, Dharasuram Post,<br />Kumbakonam – 612 702,<br />Thanjavur District, TamilNadu, India.</p>
+                            </div>
+                            <div className="flex flex-col space-y-1 ml-8">
+                                <div className="flex items-center"><Phone size={16} className="mr-2 text-green-500" /> +91 99426 48026</div>
+                                <div className="flex items-center"><Phone size={16} className="mr-2 text-green-500" /> +91 96266 66573</div>
+                            </div>
+                            <div className="flex flex-col space-y-1 ml-8 mt-2">
+                                <div className="flex items-center"><Mail size={16} className="mr-2 text-blue-500" /> kskduraimurugan2211@gmail.com</div>
+                                <div className="flex items-center"><Mail size={16} className="mr-2 text-blue-500" /> kskenggcollege@gmail.com</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
