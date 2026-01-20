@@ -76,9 +76,9 @@ const Navbar = () => {
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-3 group">
                     <img
-                        src="/images/kskcet_logo_new.png"
+                        src="/images/kskcet_header_logo.png"
                         alt="KSKCET Logo"
-                        className="h-20 md:h-32 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                        className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                 </Link>
 
