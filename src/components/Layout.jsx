@@ -4,7 +4,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import NewsTicker from './NewsTicker';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Presentation } from 'lucide-react'; // Icon for presentation
 import { Link } from 'react-router-dom'; // For the floating button
 
 const Layout = ({ children }) => {
