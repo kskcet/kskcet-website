@@ -31,20 +31,20 @@ const Home = () => {
 
                 {/* Branding Text Overlay */}
                 <div className="absolute inset-0 flex items-center justify-start px-6 md:px-12 z-10 pointer-events-none">
-                    <div className="max-w-4xl mt-20">
+                    <div className="max-w-4xl mt-32 md:mt-20">
                         <motion.h1
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.5 }}
                             className="font-black leading-none mb-6 drop-shadow-lg uppercase tracking-tighter"
                         >
-                            <span className="block text-6xl md:text-8xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-white/50 pb-2">
+                            <span className="block text-5xl md:text-8xl lg:text-9xl text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-white/50 pb-2">
                                 KSK
                             </span>
-                            <span className="block text-4xl md:text-6xl lg:text-7xl text-white">
+                            <span className="block text-3xl md:text-6xl lg:text-7xl text-white">
                                 College of
                             </span>
-                            <span className="block text-4xl md:text-6xl lg:text-7xl text-blue-400">
+                            <span className="block text-3xl md:text-6xl lg:text-7xl text-blue-400">
                                 Engineering
                             </span>
                         </motion.h1>
@@ -52,7 +52,7 @@ const Home = () => {
                             initial={{ opacity: 0, x: -50 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 1, delay: 0.8 }}
-                            className="text-xl md:text-3xl font-light text-gray-200 tracking-widest uppercase border-l-4 border-blue-500 pl-4 bg-black/20 backdrop-blur-sm inline-block py-2"
+                            className="text-lg md:text-3xl font-light text-gray-200 tracking-widest uppercase border-l-4 border-blue-500 pl-4 bg-black/20 backdrop-blur-sm inline-block py-2"
                         >
                             Empowering Future Leaders
                         </motion.p>
