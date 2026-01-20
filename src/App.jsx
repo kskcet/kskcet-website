@@ -26,6 +26,8 @@ const Gallery = lazy(() => import('./pages/Gallery'));
 const Contact = lazy(() => import('./pages/Contact'));
 const Administration = lazy(() => import('./pages/Administration'));
 const Admission = lazy(() => import('./pages/Admission'));
+// Presentation Mode (Lazy Load)
+const ProjectPresentation = lazy(() => import('./pages/ProjectPresentation'));
 
 function App() {
   return (
@@ -37,6 +39,7 @@ function App() {
           </div>
         }>
           <Routes>
+            <Route path="/presentation" element={<ProjectPresentation />} />
             <Route path="/" element={<Home />} />
 
             {/* About Section */}
@@ -117,46 +120,9 @@ function App() {
                   </div>
                 </div>
               </GenericPage>
-            } />
-
-            {/* Administration Section */}
-            <Route path="/administration" element={<Navigate to="/governing-body" replace />} />
-            <Route path="/governing-body" element={<GenericPage title="Governing Body" subtitle="Administrative Council" backgroundImage="/images/banners/governing.jpg"><p>The Governing Body ensures the effective management and strategic planning of the institution.</p></GenericPage>} />
-            <Route path="/iqac" element={<GenericPage title="IQAC" subtitle="Internal Quality Assurance Cell" backgroundImage="/images/banners/iqac.jpg"><p>IQAC works towards maintaining and enhancing the quality of education and institutional processes.</p></GenericPage>} />
-            <Route path="/grievance" element={<GenericPage title="Grievance / Suggestions" subtitle="Student & Staff Support" backgroundImage="/images/banners/grievance.jpg"><p>A dedicated cell to address grievances and suggestions from students and staff to ensure a harmonious campus environment.</p></GenericPage>} />
-
-            {/* Academics Section - Departments */}
-            <Route path="/departments" element={<Navigate to="/cse" replace />} />
-            <Route path="/cse" element={<CSE />} />
-            <Route path="/ece" element={<ECE />} />
-            <Route path="/eee" element={<EEE />} />
-            <Route path="/mech" element={<Mechanical />} />
-            <Route path="/civil" element={<Civil />} />
-            <Route path="/ai-ds" element={<AIDS />} />
-            <Route path="/bme" element={<Biomedical />} />
-            <Route path="/agri" element={<Agri />} />
-
-            {/* Other Links */}
-            <Route path="/placement" element={<Placement />} />
-            <Route path="/placements" element={<Placement />} /> {/* Alias for safety */}
-            <Route path="/facilities" element={<Library />} />
-            <Route path="/library" element={<Library />} />
-            <Route path="/hostel" element={<Hostel />} />
-            <Route path="/transport" element={<Transport />} />
-            <Route path="/cafeteria" element={<Cafeteria />} />
-
-            {/* Student Support */}
-            <Route path="/events" element={<Events />} />
-            <Route path="/iedc" element={<GenericPage title="IEDC" subtitle="Innovation & Entrepreneurship" backgroundImage="/images/banners/iedc.jpg"><p>The Innovation and Entrepreneurship Development Centre (IEDC) nurtures the entrepreneurial spirit among students.</p></GenericPage>} />
-            <Route path="/nss" element={<GenericPage title="NSS" subtitle="National Service Scheme" backgroundImage="/images/banners/nss.jpg"><p>The NSS unit encourages students to engage in community service and social activities.</p></GenericPage>} />
-            <Route path="/clubs" element={<GenericPage title="Clubs" subtitle="Student Clubs" backgroundImage="/images/banners/clubs.jpg"><p>Various clubs like the Science Club, fine Arts Club, and Tech Club provide platforms for students to showcase their talents.</p></GenericPage>} />
-
-            <Route path="*" element={<div className="min-h-screen flex items-center justify-center text-2xl font-bold bg-gray-50">Page Not Found</div>} />
-          </Routes>
-        </Suspense>
       </Layout >
-    </Router >
-  );
+        </Router >
+        );
 }
 
-export default App;
+        export default App;

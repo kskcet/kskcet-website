@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import NewsTicker from './NewsTicker';
 import { AnimatePresence, motion } from 'framer-motion';
+import { Presentation } from 'lucide-react'; // Icon for presentation
+import { Link } from 'react-router-dom'; // For the floating button
 
 const Layout = ({ children }) => {
     const location = useLocation();
@@ -13,7 +15,7 @@ const Layout = ({ children }) => {
     }, [location.pathname]);
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen relative"> {/* Added relative for the floating button */}
             <Navbar />
             {location.pathname === '/' && <NewsTicker />}
             <AnimatePresence mode="wait">
