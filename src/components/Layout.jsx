@@ -31,6 +31,18 @@ const Layout = ({ children }) => {
                 </motion.main>
             </AnimatePresence>
             <Footer />
+
+            {/* Floating Presentation Mode Button */}
+            <Link
+                to="/presentation"
+                className="fixed bottom-6 right-6 z-50 bg-white/10 hover:bg-blue-600 text-gray-500 hover:text-white p-3 rounded-full backdrop-blur-md shadow-lg transition-all duration-300 group border border-gray-200/20 hover:border-transparent hover:scale-110"
+                title="Project Presentation Mode"
+            >
+                <Presentation size={20} />
+                <span className="absolute right-full mr-2 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">
+                    Presentation Mode
+                </span>
+            </Link>
         </div>
     );
 };
