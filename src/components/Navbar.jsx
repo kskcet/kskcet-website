@@ -72,18 +72,18 @@ const Navbar = () => {
         <nav
             className={`fixed top-0 left-0 right-0 z-[50] transition-all duration-300 font-sans ${navbarClasses}`}
         >
-            <div className="w-full px-4 md:px-8 flex justify-between items-center gap-4">
+            <div className="w-full px-4 md:px-8 flex justify-between items-center gap-4 lg:gap-8">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-3 group shrink-0">
                     <img
                         src="/images/kskcet_header_logo.png"
                         alt="KSKCET Logo"
-                        className="h-20 md:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                        className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                 </Link>
 
                 {/* Desktop Nav */}
-                <div className="hidden lg:flex items-center gap-8 xl:gap-10">
+                <div className="hidden lg:flex items-center gap-4 xl:gap-8">
                     {navLinks.map((link) => (
                         <div
                             key={link.name}
@@ -93,7 +93,7 @@ const Navbar = () => {
                         >
                             {link.subItems ? (
                                 <>
-                                    <button className={`flex items-center font-bold text-[16px] xl:text-[17px] tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}>
+                                    <button className={`flex items-center font-bold text-sm xl:text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}>
                                         {link.name} <ChevronDown size={14} className={`ml-1 transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                                     </button>
 
@@ -125,7 +125,7 @@ const Navbar = () => {
                             ) : (
                                 <Link
                                     to={link.path}
-                                    className={`font-bold text-[16px] xl:text-[17px] tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}
+                                    className={`font-bold text-sm xl:text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}
                                 >
                                     {link.name}
                                 </Link>
@@ -135,7 +135,7 @@ const Navbar = () => {
                 </div>
 
                 {/* CTA Button (Desktop) */}
-                <Link to="/admission" className={`hidden lg:block px-6 py-2.5 rounded-md font-semibold text-sm transition-all shadow-sm shrink-0 ml-4 ${navTextIsDark
+                <Link to="/admission" className={`hidden lg:block px-6 py-2.5 rounded-md font-semibold text-sm transition-all shadow-sm shrink-0 ml-auto xl:ml-0 ${navTextIsDark
                     ? 'bg-blue-600 text-white hover:bg-blue-700'
                     : 'bg-white text-blue-900 hover:bg-gray-100'
                     }`}>
