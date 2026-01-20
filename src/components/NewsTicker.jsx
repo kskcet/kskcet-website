@@ -81,7 +81,7 @@ const NewsTicker = () => {
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 50 }}
                     transition={{ duration: 0.5 }}
-                    className="hidden lg:block fixed bottom-0 left-0 right-0 z-[40] bg-blue-900 border-t border-blue-700 shadow-2xl"
+                    className="fixed bottom-0 left-0 right-0 z-[40] bg-blue-900 border-t border-blue-700 shadow-2xl"
                 >
                     <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-6">
                         <div className="flex items-center flex-1 overflow-hidden">
