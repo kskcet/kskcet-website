@@ -28,40 +28,34 @@ const NewsTicker = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 50 }}
                 transition={{ duration: 0.5 }}
-                className="fixed bottom-0 left-0 right-0 z-[40] bg-blue-900 border-t border-blue-700 shadow-2xl"
+                className="hidden lg:block fixed bottom-0 left-0 right-0 z-[40] bg-blue-900 border-t border-blue-700 shadow-2xl"
             >
-                <div className="container mx-auto px-4 py-3 md:py-4 flex items-center justify-between gap-4">
+                <div className="container mx-auto px-4 py-3 flex items-center justify-between gap-6">
                     <div className="flex items-center flex-1 overflow-hidden">
-                        {/* Label: Hidden on small mobile to save space, visible on md+ */}
-                        <div className="hidden md:flex items-center text-white font-bold whitespace-nowrap bg-blue-800 px-5 py-2 rounded text-sm md:text-base shadow-md mr-4">
+                        <div className="flex items-center text-white font-bold whitespace-nowrap bg-blue-800 px-5 py-2 rounded text-base shadow-md mr-6 relative z-10">
                             <Bell size={20} className="mr-2 animate-pulse" />
                             Latest Updates
                         </div>
 
-                        {/* Mobile Icon Only Label */}
-                        <div className="md:hidden flex items-center justify-center bg-blue-800 p-2 rounded text-white shadow-md mr-3 shrink-0">
-                            <Bell size={18} className="animate-pulse" />
-                        </div>
-
-                        <div className="overflow-hidden relative flex-1">
-                            <div className="animate-marquee whitespace-nowrap text-blue-100 text-base md:text-xl font-medium">
-                                <span className="mx-4">📢 Admission Open for 2026 Academic Year! Apply Now.</span>
-                                <span className="mx-4">•</span>
-                                <span className="mx-4">🏆 KSKCET Students win First Prize in National Hackathon.</span>
-                                <span className="mx-4">•</span>
-                                <span className="mx-4">📅 Upcoming Event: Tech Symposium on Feb 28th.</span>
-                                <span className="mx-4">•</span>
-                                <span className="mx-4">🎓 Placement Drive: Top MNCs recruiting this week.</span>
+                        <div className="overflow-hidden relative flex-1 mask-linear-fade">
+                            <div className="animate-marquee whitespace-nowrap text-blue-100 text-xl font-medium flex items-center">
+                                <span className="mx-8">📢 Admission Open for 2026 Academic Year! Apply Now.</span>
+                                <span className="mx-8">•</span>
+                                <span className="mx-8">🏆 KSKCET Students win First Prize in National Hackathon.</span>
+                                <span className="mx-8">•</span>
+                                <span className="mx-8">📅 Upcoming Event: Tech Symposium on Feb 28th.</span>
+                                <span className="mx-8">•</span>
+                                <span className="mx-8">🎓 Placement Drive: Top MNCs recruiting this week.</span>
                             </div>
                         </div>
                     </div>
 
                     <button
                         onClick={() => setIsVisible(false)}
-                        className="text-blue-300 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full shrink-0"
+                        className="text-blue-300 hover:text-white transition-colors p-2 hover:bg-white/10 rounded-full shrink-0 z-50 cursor-pointer"
                         aria-label="Close"
                     >
-                        <X size={20} />
+                        <X size={24} />
                     </button>
                 </div>
             </motion.div>

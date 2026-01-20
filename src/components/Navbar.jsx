@@ -78,7 +78,7 @@ const Navbar = () => {
                     <img
                         src="/images/kskcet_header_logo.png"
                         alt="KSKCET Logo"
-                        className="h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                        className="h-20 md:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                 </Link>
 
