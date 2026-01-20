@@ -72,18 +72,18 @@ const Navbar = () => {
         <nav
             className={`fixed top-0 left-0 right-0 z-[50] transition-all duration-300 font-sans ${navbarClasses}`}
         >
-            <div className="w-full px-4 md:px-8 flex justify-between items-center gap-4 lg:gap-8">
+            <div className="w-full px-4 md:px-8 flex justify-between items-center gap-4">
                 {/* Logo */}
                 <Link to="/" className="flex items-center gap-3 group shrink-0">
                     <img
                         src="/images/kskcet_header_logo.png"
                         alt="KSKCET Logo"
-                        className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                        className="h-12 md:h-16 xl:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                 </Link>
 
-                {/* Desktop Nav */}
-                <div className="hidden lg:flex items-center gap-4 xl:gap-8">
+                {/* Desktop Nav - ONLY ON XL SCREENS (High Res / Low Zoom) */}
+                <div className="hidden xl:flex items-center gap-6 2xl:gap-10">
                     {navLinks.map((link) => (
                         <div
                             key={link.name}
@@ -93,7 +93,7 @@ const Navbar = () => {
                         >
                             {link.subItems ? (
                                 <>
-                                    <button className={`flex items-center font-bold text-sm xl:text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}>
+                                    <button className={`flex items-center font-bold text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}>
                                         {link.name} <ChevronDown size={14} className={`ml-1 transition-transform duration-200 ${activeDropdown === link.name ? 'rotate-180' : ''}`} />
                                     </button>
 
@@ -125,7 +125,7 @@ const Navbar = () => {
                             ) : (
                                 <Link
                                     to={link.path}
-                                    className={`font-bold text-sm xl:text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}
+                                    className={`font-bold text-base tracking-wide transition-colors ${navTextIsDark ? 'text-blue-900 hover:text-blue-600' : 'text-blue-900 hover:text-blue-600'}`}
                                 >
                                     {link.name}
                                 </Link>
@@ -134,18 +134,21 @@ const Navbar = () => {
                     ))}
                 </div>
 
-                {/* CTA Button (Desktop) */}
-                <Link to="/admission" className={`hidden lg:block px-6 py-2.5 rounded-md font-semibold text-sm transition-all shadow-sm shrink-0 ml-auto xl:ml-0 ${navTextIsDark
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'bg-white text-blue-900 hover:bg-gray-100'
-                    }`}>
-                    Admission
-                </Link>
+                {/* CTA Button & Mobile Toggle Area */}
+                <div className="flex items-center gap-4">
+                    {/* Admission Button - Visible on larger mobile/tablets too if space permits, or stick to lg+ */}
+                    <Link to="/admission" className={`hidden md:block px-5 py-2 md:px-6 md:py-2.5 rounded-md font-semibold text-sm transition-all shadow-sm shrink-0 ${navTextIsDark
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
+                        : 'bg-white text-blue-900 hover:bg-gray-100'
+                        }`}>
+                        Admission
+                    </Link>
 
-                {/* Mobile Toggle */}
-                <button onClick={() => setIsOpen(true)} className={`lg:hidden p-2 ${navTextIsDark ? 'text-blue-900' : 'text-blue-900'}`}>
-                    <Menu size={28} />
-                </button>
+                    {/* Mobile Toggle - Visible until XL */}
+                    <button onClick={() => setIsOpen(true)} className={`xl:hidden p-2 ${navTextIsDark ? 'text-blue-900' : 'text-blue-900'}`}>
+                        <Menu size={28} />
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu Overlay */}
