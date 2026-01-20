@@ -7,7 +7,7 @@ const ProfileLayout = ({ title, name, role, image, quote, children }) => {
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
                     {/* Left Column: Avatar & Info */}
-                    <div className="w-full md:w-1/3 flex flex-col items-center sticky top-24">
+                    <div className="w-full md:w-1/3 flex flex-col items-center md:sticky md:top-24 mb-10 md:mb-0">
                         <div className="relative group">
                             <div className="absolute inset-0 bg-blue-600 rounded-full blur-lg opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                             <div className="w-64 h-64 md:w-72 md:h-72 rounded-full overflow-hidden border-[6px] border-white shadow-2xl relative z-10">
