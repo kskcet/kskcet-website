@@ -30,10 +30,10 @@ const Contact = () => {
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">Campus Address</h3>
                                     <address className="not-italic text-gray-600 leading-relaxed">
-                                        Thanjavur Main Road,<br />
-                                        Ammapettai, Darasuram-Post,<br />
-                                        Kumbakonam-Tk., Thanjavur-Dist.<br />
-                                        <span className="font-semibold text-gray-800 mt-1 block">Pincode: 612702</span>
+                                        KSK College of Engineering & Technology<br />
+                                        River Bridge 45C, Dharasuram Post,<br />
+                                        Kumbakonam – 612 702,<br />
+                                        Thanjavur District, TamilNadu, India.
                                     </address>
                                 </div>
                             </div>
@@ -45,19 +45,24 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">Key Contacts</h3>
-                                    <div className="space-y-3">
-                                        <div className="flex items-center justify-between gap-4 border-b border-gray-50 pb-2">
-                                            <span className="font-medium text-gray-700">Principal Office</span>
-                                            <a href="tel:+919865698983" className="text-blue-600 font-bold hover:underline">+91 98656 98983</a>
+                                    <div className="grid grid-cols-1 sm:grid-cols-[100px_1fr] gap-4 items-start sm:items-center">
+
+                                        <span className="font-medium text-gray-700">Office</span>
+                                        <div className="text-left sm:text-right">
+                                            <a href="tel:+919626666573" className="text-blue-600 font-bold hover:underline block">+91 96266 66573</a>
                                         </div>
-                                        <div className="flex items-center justify-between gap-4 border-b border-gray-50 pb-2">
-                                            <span className="font-medium text-gray-700">Admission Office</span>
-                                            <a href="tel:+919942648026" className="text-blue-600 font-bold hover:underline">+91 99426 48026</a>
+
+                                        <span className="font-medium text-gray-700">Admission</span>
+                                        <div className="text-left sm:text-right">
+                                            <a href="tel:+919942648026" className="text-blue-600 font-bold hover:underline block">+91 99426 48026</a>
                                         </div>
-                                        <div className="flex items-center justify-between gap-4">
-                                            <span className="font-medium text-gray-700">Email</span>
-                                            <a href="mailto:kskenggprincipal@gmail.com" className="text-blue-600 font-bold hover:underline text-sm">kskenggprincipal@gmail.com</a>
+
+                                        <span className="font-medium text-gray-700 self-start mt-1">Email</span>
+                                        <div className="text-left sm:text-right flex flex-col gap-1 w-full overflow-hidden">
+                                            <a href="mailto:kskduraimurugan2211@gmail.com" className="text-blue-600 font-bold hover:underline text-sm break-all">kskduraimurugan2211@gmail.com</a>
+                                            <a href="mailto:kskenggcollege@gmail.com" className="text-blue-600 font-bold hover:underline text-sm break-all">kskenggcollege@gmail.com</a>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
